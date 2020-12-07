@@ -1,0 +1,6 @@
+- name: Install git v{{ git_version }}
+  apt:
+    name: git={{ git_version }}
+    state: present
+    update_cache: yes
+  become: yes
