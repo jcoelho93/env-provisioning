@@ -3,4 +3,3 @@
   connection: local
   roles:
     - base
-    - { role: geerlingguy.docker, become: yes }
