@@ -1,5 +1,11 @@
-- include_role:
+- name: Install Docker
+  include_role:
     name: geerlingguy.docker
+    apply:
+      become: yes
+  vars:
+    docker_users:
+      - "{{ lookup('env', 'USER') }}"
 
 - name: Install git v{{ git_version }}
   apt:
