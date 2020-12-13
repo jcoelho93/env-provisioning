@@ -1,33 +1,6 @@
-- name: Install Docker
-  include_role:
-    name: geerlingguy.docker
-    apply:
-      become: yes
-  vars:
-    docker_users:
-      - "{{ lookup('env', 'USER') }}"
+---
+- include_tasks: git.yml
 
-- name: Install git v{{ git_version }}
-  apt:
-    name: git={{ git_version }}
-    state: present
-    update_cache: yes
-  become: yes
+- include_tasks: docker.yml
 
-- name: Set git user email
-  community.general.git_config:
-    name: user.email
-    scope: global
-    value: "{{ user_email }}"
-
-- name: Set git user name
-  community.general.git_config:
-    name: user.name
-    scope: global
-    value: "{{ user_name }}"
-
-- name: Add git status aliases
-  community.general.git_config:
-    name: alias.st
-    scope: global
-    value: status
+- include_tasks: vscode.yml

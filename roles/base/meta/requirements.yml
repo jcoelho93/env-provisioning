@@ -1,0 +1,6 @@
+---
+roles:
+  - geerlingguy.docker
+  - gantsign.visual-studio-code
+collections:
+  - community.general.git_config

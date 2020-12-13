@@ -1,0 +1,8 @@
+- name: Install Docker
+  include_role:
+    name: geerlingguy.docker
+    apply:
+      become: yes
+  vars:
+    docker_users:
+      - "{{ lookup('env', 'USER') }}"

@@ -1,0 +1,14 @@
+galaxy_info:
+  author: jcoelho93
+  description: Basic development environment
+  min_ansible_version: 2.9.6
+  platforms:
+  - name: Ubuntu
+    versions:
+    - 20.04.1
+  galaxy_tags:
+    - system
+    - provisioning
+    - environment
+    - development
+    - ubuntu

@@ -1,0 +1,14 @@
+---
+- name: Install vs code
+  include_role:
+    name: gantsign.visual-studio-code
+    apply:
+      become: yes
+  vars:
+    users:
+      - username: "{{ lookup('env', 'USER') }}"
+        visual_studio_code_settings_overwrite: yes
+        visual_studio_code_settings: {
+          "files.autoSave": "afterDelay",
+          "workbench.startupEditor": "newUntitledFile"
+        }
