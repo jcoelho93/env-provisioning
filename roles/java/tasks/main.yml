@@ -1,0 +1,6 @@
+---
+- include_tasks: jdk.yml
+
+- include_tasks: maven.yml
+
+- include_tasks: intellij.yml

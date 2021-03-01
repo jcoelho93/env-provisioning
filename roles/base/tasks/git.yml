@@ -18,8 +18,20 @@
     scope: global
     value: "{{ user_name }}"
 
-- name: Add git status aliases
+- name: Add git status alias
   community.general.git_config:
     name: alias.st
     scope: global
     value: status
+
+- name: Add git checkout alias
+  community.general.git_config:
+    name: alias.co
+    scope: global
+    value: checkout
+
+- name: Add git checkout master alias
+  community.general.git_config:
+    name: alias.com
+    scope: global
+    value: checkout master

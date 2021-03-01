@@ -1,0 +1,6 @@
+---
+- name: Install IntelliJ
+  include_role:
+    name: gantsign.intellij
+    apply:
+      become: yes

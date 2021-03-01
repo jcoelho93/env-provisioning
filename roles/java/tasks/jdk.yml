@@ -1,0 +1,6 @@
+---
+- name: Install JDK
+  include_role:
+    name: geerlingguy.java
+    apply:
+      become: yes

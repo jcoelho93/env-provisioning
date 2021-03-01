@@ -1,4 +1,10 @@
 ---
+- name: create workspace
+  file:
+    path: ~/workspace
+    state: directory
+    mode: '0775'
+
 - include_tasks: git.yml
 
 - include_tasks: docker.yml
